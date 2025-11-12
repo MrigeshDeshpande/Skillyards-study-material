@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skillyards: Your First HTML Class</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+      color: #2c3e50;
+      line-height: 1.7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 1000px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      padding: 40px 50px;
+      margin: 40px;
+      animation: fadeIn 1s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.6em;
+      background: linear-gradient(90deg, #667eea, #764ba2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+    }
+    .company-tag {
+      text-align: center;
+      color: #666;
+      font-style: italic;
+      margin-bottom: 25px;
+    }
+    h2 {
+      color: #34495e;
+      font-size: 1.6em;
+      border-left: 5px solid #667eea;
+      padding-left: 15px;
+      margin-top: 30px;
+    }
+    h3 {
+      color: #3b3b98;
+      font-size: 1.2em;
+      margin-top: 15px;
+    }
+    p {
+      font-size: 1.05em;
+      color: #444;
+      text-align: justify;
+    }
+    pre {
+      background: #2d3436;
+      color: #00cec9;
+      padding: 15px 20px;
+      border-radius: 10px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.95em;
+      overflow-x: auto;
+    }
+    ol {
+      list-style: none;
+      padding-left: 0;
+      counter-reset: section;
+    }
+    ol > li {
+      counter-increment: section;
+      background: #f8faff;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 12px;
+      border-left: 6px solid #667eea;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+    ol > li:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    ol > li::before {
+      content: counter(section) ". ";
+      color: #667eea;
+      font-weight: bold;
+      font-size: 1.3em;
+    }
+    ul {
+      margin-left: 25px;
+      padding: 5px 0;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    strong {
+      color: #0078ff;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 25px 0;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 14px 16px;
+      border: 1px solid #dee2e6;
+      text-align: left;
+      font-size: 0.95em;
+    }
+    th {
+      background: linear-gradient(90deg, #667eea, #764ba2);
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f9fafc;
+    }
+    tr:hover {
+      background-color: #eef2ff;
+    }
+    .note-box {
+      background: linear-gradient(120deg, #667eea, #764ba2);
+      color: white;
+      padding: 30px;
+      border-radius: 15px;
+      margin-top: 40px;
+      box-shadow: 0 10px 30px rgba(118, 75, 162, 0.2);
+    }
+    .note-box h2 {
+      color: white;
+      border-left: 5px solid white;
+    }
+    .note-box li {
+      list-style: none;
+      margin-bottom: 10px;
+    }
+    .note-box li::before {
+      content: "🌟 ";
+    }
+    a {
+      color: #0078ff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 768px) {
+      .container {
+        padding: 25px;
+      }
+      h1 {
+        font-size: 2em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Skillyards</h1>
+    <p class="company-tag">Empowering Future Coders</p>
+
+    <h2>Welcome to Your First HTML Class 🎉</h2>
+    <p>HTML is like the **skeleton** of a webpage. It gives structure and meaning to everything you see online — text, images, buttons, videos, and more. Learning HTML is the first step in becoming a web developer. Let’s make it simple, visual, and fun!</p>
+
+    <h2>HTML Boilerplate - Explained Simply</h2>
+    <p>This is the foundation of every webpage. Think of it like the "base template" you’ll always start with. Once you understand this, you can start building anything — blogs, portfolios, or entire web apps.</p>
+
+    <ol>
+      <li>
+        <h2>1️⃣ DOCTYPE Declaration</h2>
+        <pre>&lt;!DOCTYPE html&gt;</pre>
+        <ul>
+          <li><strong>What it means:</strong> Tells the browser this is HTML5 (the latest version).</li>
+          <li><strong>Tip:</strong> Always put this on the first line — no spaces, no comments before it!</li>
+          <li><strong>Analogy:</strong> Like introducing yourself before an interview — the browser needs to know who you are.</li>
+        </ul>
+      </li>
+
+      <li>
+        <h2>2️⃣ HTML Tag</h2>
+        <pre>&lt;html lang="en"&gt; ... &lt;/html&gt;</pre>
+        <ul>
+          <li><strong>What it means:</strong> It wraps your entire webpage — everything goes inside it.</li>
+          <li><strong>Attribute:</strong> <code>lang="en"</code> helps browsers and Google know the page language.</li>
+          <li><strong>Fun fact:</strong> Change "en" to "hi" for Hindi, "fr" for French, etc.</li>
+        </ul>
+      </li>
+
+      <li>
+        <h2>3️⃣ Head Section</h2>
+        <pre>&lt;head&gt; ... &lt;/head&gt;</pre>
+        <ul>
+          <li><strong>What it means:</strong> The backstage area — it sets up the page but isn’t visible to users.</li>
+          <li><strong>Contains:</strong> Title, meta info, links to CSS, scripts, and favicon.</li>
+        </ul>
+
+        <h3>Inside the Head:</h3>
+        <pre>
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;My First Page&lt;/title&gt;
+        </pre>
+        <ul>
+          <li><strong>charset:</strong> Makes sure all characters (like emojis 😊 and ©) show correctly.</li>
+          <li><strong>viewport:</strong> Makes your site look nice on mobile devices.</li>
+          <li><strong>title:</strong> Appears in browser tabs and search results.</li>
+        </ul>
+      </li>
+
+      <li>
+        <h2>4️⃣ Body Section</h2>
+        <pre>
+&lt;body&gt;
+  &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+  &lt;p&gt;This is where your visible content goes.&lt;/p&gt;
+&lt;/body&gt;
+        </pre>
+        <ul>
+          <li><strong>What it means:</strong> Everything users see on the webpage — text, images, buttons, videos, etc.</li>
+          <li><strong>Pro tip:</strong> Add headings (<code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>), paragraphs, lists, and images here.</li>
+        </ul>
+      </li>
+
+      <li>
+        <h2>5️⃣ Tags, Attributes, and Comments</h2>
+        <pre>
+&lt;h1&gt;Hello World!&lt;/h1&gt;
+&lt;img src="photo.jpg" alt="My Photo"&gt;
+&lt;!-- This is a comment --&gt;
+        </pre>
+        <ul>
+          <li><strong>Tags:</strong> Keywords that define elements. Example: <code>&lt;p&gt;</code> for paragraph.</li>
+          <li><strong>Attributes:</strong> Extra info that modifies tags. Example: <code>src</code> or <code>alt</code> in images.</li>
+          <li><strong>Comments:</strong> Notes for yourself — the browser ignores them.</li>
+        </ul>
+      </li>
+
+      <li>
+        <h2>6️⃣ Indentation & Clean Code</h2>
+        <p>Indentation makes your code readable. Always use 2 spaces or a tab inside nested tags. It helps you (and others) understand your structure easily.</p>
+        <pre>
+&lt;body&gt;
+  &lt;div&gt;
+    &lt;h1&gt;Hello&lt;/h1&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+        </pre>
+      </li>
+
+      <li>
+        <h2>7️⃣ Closing Tags</h2>
+        <pre>&lt;/body&gt;
+&lt;/html&gt;</pre>
+        <ul>
+          <li><strong>Why important:</strong> Every opening tag needs its closing tag to keep the structure valid.</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h2>🧠 Quick Summary Table</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Element</th>
+          <th>What It Does</th>
+          <th>Where It Goes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>&lt;!DOCTYPE html&gt;</td><td>Declares HTML5 version</td><td>Top of file</td></tr>
+        <tr><td>&lt;html&gt;</td><td>Wraps the whole page</td><td>After DOCTYPE</td></tr>
+        <tr><td>&lt;head&gt;</td><td>Holds metadata</td><td>Before body</td></tr>
+        <tr><td>&lt;title&gt;</td><td>Sets the tab name</td><td>Inside head</td></tr>
+        <tr><td>&lt;body&gt;</td><td>Visible content</td><td>After head</td></tr>
+        <tr><td>&lt;/html&gt;</td><td>Ends document</td><td>Last line</td></tr>
+      </tbody>
+    </table>
+
+    <div class="note-box">
+      <h2>Helpful Notes & Practice Tasks 🌟</h2>
+      <ul>
+        <li>HTML tags aren’t case-sensitive, but use lowercase for neatness.</li>
+        <li>Use proper indentation — it’s like writing neatly in a notebook.</li>
+        <li>Write comments (<code>&lt;!-- like this --&gt;</code>) to remember what each section does.</li>
+        <li>Save your file as <code>index.html</code> — browsers open this first automatically.</li>
+        <li>Mini Task: Create a simple webpage with your name, one image, and a paragraph about you.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
